@@ -30,7 +30,7 @@ data "aws_iam_policy_document" "allow_access_from_another_account" {
   statement {
     principals {
       type        = "AWS"
-      identifiers = ["arn:aws:iam::3711-9163-7464:user/tugba1"]
+      identifiers = [""]
     }
 
     actions = [
