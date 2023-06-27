@@ -14,7 +14,7 @@ resource "aws_instance" "terraform_aws_ec2" {
 resource "aws_security_group" "terraform_sg" {
   name        = "terraform_sg_aws_test"
   description = "allow ssh inbound traffic"
-  vpc_id      = "vpc-0e07184f7d721ff67"
+  vpc_id      = ""
 
 
 }
