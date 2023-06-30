@@ -27,3 +27,9 @@ resource "aws_s3_bucket_policy" "s3_bucket_policy" {
   policy = data.aws_iam_policy_document.aws_iam_policy_s3.json
 
 }
+resource "random_pet" "s3_name" {
+    length = 3
+    separator = "-"
+    
+  
+}
