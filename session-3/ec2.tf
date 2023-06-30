@@ -1,5 +1,5 @@
 resource "aws_instance" "my_instance" {
-  ami           = var.image_id
+  ami           = data.aws_ami.amazon_linux_2023.id
   instance_type = var.instance_type
   tags = {
     Name = "myinstance"
