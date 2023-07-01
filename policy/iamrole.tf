@@ -7,7 +7,7 @@ resource "aws_iam_role" "terraform-role" {
   }
 }
 
-resource "aws_iam_instance_profile" "terraform-instance-profile" {
+resource "aws_iam_instance_profile" "terraform-instance-profile"{  #creates iam instance profile. an instance profile is a container for iam role that can be associated with an ec2 instance
   name = "terraform-instance-profile"
   role = aws_iam_role.terraform-role.name
 }
