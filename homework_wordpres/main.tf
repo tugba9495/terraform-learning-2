@@ -1,6 +1,9 @@
 
   resource "aws_vpc" "vpc_wordpress" {
     cidr_block = var.cidr_block_forvpc
+    tags = {
+      Name = "vpcwordpress"
+    }
     
   }
   resource "aws_subnet" "public_subnet_1" {
@@ -52,3 +55,11 @@
     }
     
   }
+  resource "aws_internet_gateway" "internetgateway_wordpress" {
+    vpc_id = aws_vpc.vpc_wordpress.id
+    tags = {
+      Name = "internetgatewaywordpress"
+    }
+    
+  }
+  
