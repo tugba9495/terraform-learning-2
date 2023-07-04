@@ -1,9 +1,0 @@
-resource "aws_instance" "my_instance" {
-  ami           = var.image_id
-  instance_type = var.instance_type
-  tags = {
-    Name = "myinstance"
-  }
-  vpc_security_group_ids = [aws_security_group.my_security_group3.id]
-
-}
