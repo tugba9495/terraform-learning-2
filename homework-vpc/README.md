@@ -1,1 +1,0 @@
-*** Create KMS Key Resource in the KMS Folder (Child Module): ***
