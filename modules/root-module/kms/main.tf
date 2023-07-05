@@ -4,5 +4,6 @@ module "s3_kms_key" {
     deletion_window_in_days = 7
     enabled = true
     enable_key_rotation = true
+    
   
 }
