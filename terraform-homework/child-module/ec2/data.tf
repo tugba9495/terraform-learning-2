@@ -1,10 +1,3 @@
-# data "vpc_id" "my_vpc_id" {
-#     most_recent = true
-#     owners      = ["self"]
-#     filter {
-#     name   = "tag:Name"
-#     values = ["terraform_instance"]
-#   }
+# data "template_file" "user_data" {
+#   template = file("${path.module}/template_file/user_data.sh")
 # }
-    
-  

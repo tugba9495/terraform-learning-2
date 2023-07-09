@@ -3,6 +3,7 @@ resource "aws_instance" "terraform_instance" {
   key_name = var.key_name
   
   instance_type = var.instance_type
+  user_data = file("${path.module}/template_file/user_data.sh")
   tags = {
     Name = "terraform_instance"
     
@@ -11,8 +12,7 @@ resource "aws_instance" "terraform_instance" {
 resource "aws_security_group" "terraform_sg_homework" {
   name        = "terraform_sg_homework"
   description = "Allow ssh"
-  vpc_id      = "vpc-05a1891d5c5b38233"
-   
+  vpc_id      = var.vpc_id
     
   }
   resource "aws_security_group_rule" "security_group_rule" {
